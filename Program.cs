@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace StackOverFlowPost
 
@@ -28,12 +28,10 @@ namespace StackOverFlowPost
                 }
                 else if (input == "quit")
                 {
-                    Console.WriteLine("The post has {0} upvotes, {1} downvotes and {2} total votes", post.CurrentUpVotes, post.CurrentDownVotes, post.CurrentUpVotes + post.CurrentDownVotes);
-                    Console.ReadLine();
+                    post.display();
                     break;
                 }
             }
-
         }
     }
 }
