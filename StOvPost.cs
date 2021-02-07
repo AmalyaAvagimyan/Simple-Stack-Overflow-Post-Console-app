@@ -45,8 +45,7 @@ namespace StackOverFlowPost
 
         public void display()
         {
-            Console.WriteLine("The post has {0} upvotes, {1} downvotes and {2} total votes", CurrentUpVotes, CurrentDownVotes, CurrentUpVotes + CurrentDownVotes);
-            Console.ReadLine();
+            Console.WriteLine("The post has {0} upvote(s), {1} downvote(s) and {2} total vote(s)", CurrentUpVotes, CurrentDownVotes, CurrentUpVotes + CurrentDownVotes);
         }
     }
 }
