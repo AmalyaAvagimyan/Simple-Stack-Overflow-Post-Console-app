@@ -9,7 +9,7 @@ namespace StackOverFlowPost
         {
             var post = new StOvPost("test title", "test description");
 
-            Console.WriteLine(@"Type 'upvote'or 'downvote' the post or 'quit' to end the program ");
+            Console.WriteLine(@"Type 'upvote'or 'downvote' the post or 'display' to view the votes or'quit' to end the program ");
             var input = Console.ReadLine().ToLower();
 
             while(true)
@@ -17,13 +17,19 @@ namespace StackOverFlowPost
                 if (input == "upvote")
                 {
                     post.UpVote();
-                    Console.WriteLine(@"Type 'upvote'or 'downvote' the post or 'quit' to end the program ");
+                    Console.WriteLine(@"Type 'upvote'or 'downvote' the post or 'display' to view the votes or'quit' to end the program ");
                     input = Console.ReadLine().ToLower();
                 }
                 else if (input == "downvote")
                 {
                     post.DownVote();
-                    Console.WriteLine(@"Type 'upvote'or 'downvote' the post or 'quit' to end the program ");
+                    Console.WriteLine(@"Type 'upvote'or 'downvote' the post or 'display' to view the votes or'quit' to end the program ");
+                    input = Console.ReadLine().ToLower();
+                }
+                else if (input == "display")
+                {
+                    post.display();
+                    Console.WriteLine(@"Type 'upvote'or 'downvote' the post or 'display' to view the votes or'quit' to end the program ");
                     input = Console.ReadLine().ToLower();
                 }
                 else if (input == "quit")
