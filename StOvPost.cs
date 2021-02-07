@@ -1,14 +1,15 @@
-﻿using System;
+using System;
 
 namespace StackOverFlowPost
 
 {
     public class StOvPost
     {
-        public int CurrentUpVotes { get; set; }
-        public int CurrentDownVotes { get; set; }
+        private int CurrentUpVotes { get; set; }
+        private int CurrentDownVotes { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+
         public DateTime Date 
         {
             get
@@ -34,15 +35,18 @@ namespace StackOverFlowPost
 
         public int UpVote()
         {
-            return CurrentUpVotes += 1;
-           
+            return CurrentUpVotes += 1;         
         }
 
         public int DownVote()
         {
-            return CurrentDownVotes += 1;
-           
+            return CurrentDownVotes += 1;          
         }
 
+        public void display()
+        {
+            Console.WriteLine("The post has {0} upvotes, {1} downvotes and {2} total votes", CurrentUpVotes, CurrentDownVotes, CurrentUpVotes + CurrentDownVotes);
+            Console.ReadLine();
+        }
     }
 }
